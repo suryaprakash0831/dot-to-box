@@ -14,7 +14,6 @@ $(function (){
 
 // <---Start button--->
 	$('#button').on('click', function(event){
-		playSound('sounds/school-bell.wav');
 		$instructions.slideUp(600);
 		$gameboard.show()	
 	});
