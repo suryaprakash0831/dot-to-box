@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dots & Boxes</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	</head>
+	<body>
+<!-- Instructions div. This div will be hidden when the game screen is show-->
+		<div id="instructions">
+			<h2>Welcome to <br> Dots & Boxes!</h2>
+			<div><img id="doodle" src="images/paper-plane.png"></div>
+			<p>The aim of the game is to create the most amount of boxes<br> compared to your opponent.
+			<p>Here's how to play:</p>
+			<ul>
+				<li>- Take it in turns to click on a line to mark it with your colour</li><br>
+				<li>- Four lines are needed (regardless of colour) to make up a box.</li><br>
+				<li>- The person who clicks on the fourth line of the box<br> will create it, and get another turn.</li><br>
+				<li>- The more boxes you create the more turns you get.</li> <br>
+				<li>- The person with the most boxes created will be the winner.</li>
+			</ul>
+			<button id="button">Start</button><br>
+			<div><img id="doodle2" src="images/doodle2.png"></div>
+		</div>
+<!-- This is the gameboard div. It will be hidden when the instructions div is shown -->
+		<div id="gameboard">
+			<div id="top-container">
+				<div id="titles">
+					<h1>Dots & Boxes</h1>
+
+					<button id="instruct">Instructions</button>
+					<button id="restart">Restart</button>
+					<h3 id="playersturn">Player One's Turn</h3>
+						<div><img id="doodle3" src="images/sketch.png"></div>
+<!-- This is the gameboard. It consists of the title, scoreboard and game grid -->
+				</div>
+				<div id="scoreboard">
+					<div class="scores1">
+						<h4>Player One's Score</h4>
+							<div>
+								<p class="playerscore" id="player1-score" type="i">0</p>
+							</div>
+					</div> 
+					<div class="scores2">
+						<h4>Player Two's Score</h4>
+							<div>
+								<p class="playerscore" id="player2-score" type="i">0</p>
+							</div>
+					</div>
+				</div>
+<!-- This is the game grid. The table is made up of different size divs -->
+			<div id="game-grid">
+				<div class="divTable table">
+					<div class="divTableBody">
+						<div class="divTableRow rowone">
+							<div class="divTableCell dot">&nbsp;</div>
+							<div class="divTableCell lines h-line" label="box1" data-actions="box1-bordertop" id="1of1" >&nbsp;</div>
+							<div class="divTableCell dot">&nbsp;</div>
+							<div class="divTableCell lines h-line" label="box2" data-actions="box2-bordertop" id="2of1">&nbsp;</div>
+							<div class="divTableCell dot">&nbsp;</div>
+							<div class="divTableCell lines h-line" label="box3" data-actions="box3-bordertop" id="3of1">&nbsp;</div>
+							<div class="divTableCell dot">&nbsp;</div>
+							<div class="divTableCell lines h-line" label="box4" data-actions="box4-bordertop" id="4of1">&nbsp;</div>
+							<div class="divTableCell dot">&nbsp;</div>
+						</div>
+						<div class="divTableRow rowtwo">
+							<div class="divTableCell lines v-line" label="box1" data-actions="box1-borderleft" id="1of2">&nbsp;</div>
+							<div class="divTableCell box" id="box1">&nbsp;</div>
+							<div class="divTableCell lines v-line" label="box1 box2" data-actions="box1-borderright box2-borderleft" id="2of2">&nbsp;</div>
+							<div class="divTableCell box" id="box2">&nbsp;</div>
+							<div class="divTableCell lines v-line" label="box2 box3" data-actions="box2-borderright box3-borderleft" id="3of2">&nbsp;</div>
+							<div class="divTableCell box" id="box3">&nbsp;</div>
+							<div class="divTableCell lines v-line" label="box3 box4" data-actions="box3-borderright box4-borderleft" id="4of2">&nbsp;</div>
+							<div class="divTableCell box" id="box4">&nbsp;</div>
+							<div class="divTableCell lines v-line" label="box4" data-actions="box4-borderright" id="5of2">&nbsp;</div>
+						</div>
+						<div class="divTableRow rowthree">
+							<div class="divTableCell dot">&nbsp;</div>
+							<div class="divTableCell lines h-line" label="box1 box5" data-actions="box1-borderbottom box5-bordertop" id="1of3" >&nbsp;</div>
+							<div class="divTableCell dot">&nbsp;</div>
+							<div class="divTableCell lines h-line" label="box2 box6" data-actions="box2-borderbottom box6-bordertop" id="2of3">&nbsp;</div>
+							<div class="divTableCell dot">&nbsp;</div>
+							<div class="divTableCell lines h-line" label="box3 box7" data-actions="box3-borderbottom box7-bordertop" id="3of3">&nbsp;</div>
+							<div class="divTableCell dot">&nbsp;</div>
+							<div class="divTableCell lines h-line" label="box4 box8" data-actions="box4-borderbottom box8-bordertop" id="4of3">&nbsp;</div>
+							<div class="divTableCell dot">&nbsp;</div>
+						</div>
+						<div class="divTableRow rowfour">
+							<div class="divTableCell lines v-line" label="box5" data-actions="box5-borderleft" id="1of4">&nbsp;</div>
+							<div class="divTableCell box" id="box5">&nbsp;</div>
+							<div class="divTableCell lines v-line" label="box5 box6" data-actions="box5-borderright box6-borderleft" id="2of4">&nbsp;</div>
+							<div class="divTableCell box" id="box6">&nbsp;</div>
+							<div class="divTableCell lines v-line" label="box6 box7" data-actions="box6-borderright box7-borderleft" id="3of4">&nbsp;</div>
+							<div class="divTableCell box" id="box7">&nbsp;</div>
+							<div class="divTableCell lines v-line" label="box7 box8" data-actions="box7-borderright box8-borderleft" id="4of4">&nbsp;</div>
+							<div class="divTableCell box" id="box8">&nbsp;</div>
+							<div class="divTableCell lines v-line" label="box8" data-actions="box8-borderright" id="5of4">&nbsp;</div>
+						</div>
+						<div class="divTableRow rowfive">
+							<div class="divTableCell dot">&nbsp;</div>
+							<div class="divTableCell lines h-line" label="box5 box9" data-actions="box5-borderbottom box9-bordertop" id="1of5">&nbsp;</div>
+							<div class="divTableCell dot">&nbsp;</div>
+							<div class="divTableCell lines h-line" label="box6 box10" data-actions="box6-borderbottom box10-bordertop" id="2of5">&nbsp;</div>
+							<div class="divTableCell dot">&nbsp;</div>
+							<div class="divTableCell lines h-line" label="box7 box11" data-actions="box7-borderbottom box11-bordertop" id="3of5">&nbsp;</div>
+							<div class="divTableCell dot">&nbsp;</div>
+							<div class="divTableCell lines h-line" label="box8 box12" data-actions="box8-borderbottom box12-bordertop" id="4of5">&nbsp;</div>
+							<div class="divTableCell dot">&nbsp;</div>
+						</div>
+						<div class="divTableRow rowsix">
+							<div class="divTableCell lines v-line" label="box9" data-actions="box9-borderleft" id="1of6">&nbsp;</div>
+							<div class="divTableCell box" id="box9">&nbsp;</div>
+							<div class="divTableCell lines v-line" label="box9 box10" data-actions="box9-borderright box10-borderleft" id="2of6">&nbsp;</div>
+							<div class="divTableCell box" id="box10">&nbsp;</div>
+							<div class="divTableCell lines v-line" label="box10 box11" data-actions="box10-borderright box11-borderleft" id="3of6">&nbsp;</div>
+							<div class="divTableCell box" id="box11">&nbsp;</div>
+							<div class="divTableCell lines v-line" label="box11 box12" data-actions="box11-borderright box12-borderleft" id="4of6">&nbsp;</div>
+							<div class="divTableCell box" id="box12">&nbsp;</div>
+							<div class="divTableCell lines v-line" label="box12" data-actions="box12-borderright" id="5of6">&nbsp;</div>
+						</div>
+						<div class="divTableRow rowseven">
+							<div class="divTableCell dot">&nbsp;</div>
+							<div class="divTableCell lines h-line" label="box9 box13" data-actions="box9-borderbottom box13-bordertop" id="1of7">&nbsp;</div>
+							<div class="divTableCell dot">&nbsp;</div>
+							<div class="divTableCell lines h-line" label="box10 box14" data-actions="box10-borderbottom box14-bordertop" id="2of7">&nbsp;</div>
+							<div class="divTableCell dot">&nbsp;</div>
+							<div class="divTableCell lines h-line" label="box11 box15" data-actions="box11-borderbottom box15-bordertop" id="3of7">&nbsp;</div>
+							<div class="divTableCell dot">&nbsp;</div>
+							<div class="divTableCell lines h-line" label="box12 box16" data-actions="box12-borderbottom box16-bordertop" id="4of7">&nbsp;</div>
+							<div class="divTableCell dot">&nbsp;</div>
+						</div>
+						<div class="divTableRow roweight">
+							<div class="divTableCell lines v-line" label="box13" data-actions="box13-borderleft" id="1of8">&nbsp;</div>
+							<div class="divTableCell box" id="box13">&nbsp;</div>
+							<div class="divTableCell lines v-line" label="box13 box14" data-actions="box13-borderright box14-borderleft" id="2of8">&nbsp;</div>
+							<div class="divTableCell box" id="box14">&nbsp;</div>
+							<div class="divTableCell lines v-line" label="box14 box15" data-actions="box14-borderright box15-borderleft" id="3of8">&nbsp;</div>
+							<div class="divTableCell box" id="box15">&nbsp;</div>
+							<div class="divTableCell lines v-line" label="box15 box16" data-actions="box15-borderright box16-borderleft" id="4of8">&nbsp;</div>
+							<div class="divTableCell box" id="box16">&nbsp;</div>
+							<div class="divTableCell lines v-line" label="box16" data-actions="box16-borderright" id="5of8">&nbsp;</div
+						</div>
+						<div class="divTableRow rownine">
+							<div class="divTableCell dot">&nbsp;</div>
+							<div class="divTableCell lines h-line" label="box13" data-actions="box13-borderbottom" id="1of9">&nbsp;</div>
+							<div class="divTableCell dot">&nbsp;</div>
+							<div class="divTableCell lines h-line" label="box14" data-actions="box14-borderbottom" id="2of9">&nbsp;</div>
+							<div class="divTableCell dot">&nbsp;</div>
+							<div class="divTableCell lines h-line" label="box15" data-actions="box15-borderbottom" id="3of9">&nbsp;</div>
+							<div class="divTableCell dot">&nbsp;</div>
+							<div class="divTableCell lines h-line" label="box16" data-actions="box16-borderbottom" id="4of9">&nbsp;</div>
+							<div class="divTableCell dot">&nbsp;</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js" type="text/javascript"></script>
+		<script src="js/main.js" type="text/javascript"></script>
+	</body>
+</html>

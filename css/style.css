@@ -1,0 +1,279 @@
+
+body {
+	background-image: url("../images/background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	 background-size: 100%;
+	 font-family: 'Cabin Sketch', cursive;
+}
+body, a:hover {
+	cursor: url(http://cur.cursors-4u.net/others/oth-5/oth510.ani), url(http://cur.cursors-4u.net/others/oth-5/oth510.png), progress !important;
+} 
+
+#instructions {
+	z-index:10;
+	margin: 0 auto;
+	width: 700px;
+	background-image: url("../images/lined-paper.png");
+	background-repeat: no-repeat;
+	padding-top: 10px;
+	height: 800px;
+	text-align: center;
+	color: #454343;
+}
+
+h2 {
+	margin-top: 10px;
+}
+
+#instructions p {
+	font-size: 20px;
+}
+
+#scoreboard {
+	font-size: 20px;
+	margin-top: -70px;
+}
+
+ul li {
+	color: #454343;
+	font-size: 20px;
+	list-style: none;
+}
+
+#button {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    font-family: 'Cabin Sketch', cursive;
+    width: 100px; 
+    height: 50px;
+    margin-left: -10px;
+    margin: 0 auto;
+    -webkit-transition-duration: 0.4s;
+}
+
+#button:hover {
+    background-color: #555555;
+    color: white;
+}
+
+#restart {
+	background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    font-family: 'Cabin Sketch', cursive;
+    width: 50px; 
+    height: 25px;
+    margin-left: 400px;
+    margin-top: -100px;
+    display: inline-block;
+    transition-duration: 0.4s;
+}
+
+#restart:hover {
+	background-color: #555555;
+    color: white;
+}
+
+#instruct {
+	background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    font-family: 'Cabin Sketch', cursive;
+    width: 75px; 
+    height: 25px;
+    margin-left: 5px;
+    margin-top: -100px;
+    display: inline-block;
+    z-index: 10;
+    transition-duration: 0.4s;
+}
+
+#instruct:hover {
+	background-color: #555555;
+    color: white;
+}
+
+
+#doodle {
+	height: 100px;
+    margin: 0 auto;
+    padding-left: 250px;
+    transform: rotate(12deg);
+    z-index: -2;
+    width: 300px;
+    margin-top: -90px;
+}
+
+#doodle2 {
+	width: 300px;
+    height: 300px;
+    z-index: -1;
+    margin-left: -380px;
+    margin-top: -40px;
+}
+
+#doodle3 {
+	height: 100px;
+    margin: 0 auto;
+    padding-left: 290px;
+    transform: rotate(345deg);
+    z-index: -5;
+    margin-top: -100px;
+}
+
+h1 {
+	transition: all .2s ease-in-out; 
+
+}
+h1:hover {
+	transform: scale(1.1); 
+}
+#titles {
+	margin-left: -35px;	
+}
+
+#gameboard {
+	z-index:-1;
+	margin: 0 auto;
+	width: 700px;
+	background-image: url("../images/lined-paper.png");
+	background-repeat: no-repeat;
+	padding-top: 10px;
+	height: 900px;
+	text-align: center;
+	display: none;
+}
+
+#top-container {
+	text-align: center;
+	padding-top: 10px;
+	color: #454343;
+	margin-top: -30px;
+}
+
+#playersturn {
+	margin-top: 0px;
+    margin-bottom: 50px;
+    font-size: 25px;
+}
+.scores1 {
+	height: 50px;
+	width: 300px;
+	display: inline-block;
+	padding: 20px;
+	color: #ffa416;
+	font-size: 20px;
+}
+
+.scores2 {
+	height: 50px;
+	width: 300px;
+	display: inline-block;
+	padding: 20px;
+	color: #199acc;
+	font-size: 20px;
+}
+
+#game-grid {
+	margin-left: -220px;
+	margin-top: -20px;
+
+}
+.playerscore {
+	display: inline-block;
+}
+
+div.table {
+  width: 600px;
+  height: 500px;
+  border-collapse: collapse;
+  margin-left: 240px;
+  margin-top: 30px;
+}
+
+.divTable.table .divTableCell, .divTable.table .divTableHead {
+  border width: 1px;
+  border-style: dashed;
+  padding: 4px 1px;
+  border-color: #454343;
+}
+
+.divTable{ 
+	display: table; 
+}
+.divTableRow { 
+	display: table-row; 
+}
+
+.divTableCell, .divTableHead { 
+	display: table-cell;
+}
+.divTableBody { 
+	display: table-row-group;
+}
+
+.lines {
+	vertical-align: top; 
+}
+
+.h-line {
+	height: 0.01em;
+}
+
+.v-line {
+	width: 25px
+}
+
+.dot {
+	background-color: #454343;
+	border-radius: 13px;
+}
+
+/*This is the CSS to be added to the elements with JS*/
+.player1 {
+	background-image: url("../images/orange-scribble.png");
+	border-color: #ffa416 !important;
+	border-style: solid !important;
+	border-width: 1px !important;
+	background-size: contain;
+	background-repeat: repeat;
+}
+
+.player2 {
+	background-image: url("../images/blue-scribble.png");
+	border-color: #199acc !important;
+	border-style: solid !important;
+	border-width: 1px !important;
+	background-size: contain;
+	background-repeat: repeat;
+}
+
+.line-drawn {
+	border width:  1px;
+}
+
+.bordertop {
+	border-top: solid;
+	border-top-width: 1px;
+	border-top-color: transparent; 
+}
+
+.borderleft {
+	border-left: solid;
+	border-left-width: 1px;
+	border-left-color: transparent;
+}
+
+.borderright {
+	border-right: solid;
+	border-right-width: 1px;
+	border-right-color: transparent; 
+}
+
+.borderbottom {
+	border-bottom: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: transparent;
+}
